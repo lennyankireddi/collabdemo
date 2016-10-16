@@ -1,3 +1,5 @@
 $(document).ready(function() {
-    $("#calendar").fullCalendar();
+    $("#calendar").fullCalendar({
+        height: 400
+    });
 });
