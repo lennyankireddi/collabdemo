@@ -1,0 +1,27 @@
+{
+  "name": "collabdemo",
+  "version": "1.0.0",
+  "description": "C+C Collaboration Demo (Slalom Chicago)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://github/lennyankireddi/collabdemo"
+  },
+  "keywords": [
+    "C+C",
+    "Collaboration",
+    "Demo",
+    "Slalom",
+    "Chicago"
+  ],
+  "author": "Lenny Ankireddi",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "fullcalendar": "^3.0.1",
+    "jquery": "^3.1.1"
+  }
+}
