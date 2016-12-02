@@ -4,39 +4,464 @@
         <title>C+C Collaboration Demo</title>
         <meta charset="utf-8" />
         <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="./node_modules/font-awesome/css/font-awesome.min.css" />
+        <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
         <link rel="stylesheet" href="css/collab.css" />
         <script type="text/javascript" src="./js/collab.js"></script>
     </head>
     <body>
         <!-- Header (master page) -->
         <div class="container-fluid header">
-            <div class="site-logo-container col-sm-3">
+            <div class="site-logo-container col-sm-2">
                 <img src="./img/blackdiamondlogo.png" alt="Black Diamond" class="site-logo-image img-responsive" />
             </div>
-            <div class="navigation-container col-sm-9">
+            <div class="navigation-container col-sm-10">
                 <div class="header-buffer-top hidden-xs"></div>
+                <div class="user-control">
+                    <div class="user-image-container">
+                        <img src="./img/rkipp.png" alt="Robert Kipp" class="user-image" />
+                    </div>
+                    <div class="user-name">Robert Kipp</div>
+                    <div class="arrow-container"><div class="arrow-down"></div></div>
+                </div>
             </div>
-            <div class="navigation-bottom col-sm-9">
+            <div class="navigation-bottom col-sm-10">
                 <div class="header-buffer-bottom hidden-xs"></div>
             </div>
         </div>
 
         <!-- Menu (master page) -->
-        <div class="menu-container">
+        <div class="container-fluid menu-container">
             <div class="menu-launcher">
-                
+                <span class="fa fa-bars"></span>
             </div>
-            <div class="site-title-container"></div>
-            <div class="search-box-container"></div>
+            <div class="site-title-container">
+                The Lodge
+            </div>
+            <div class="search-box-container">
+                <input class="search-box" type="text" value="Search this site" />
+                <button class="search-button"><span class="fa fa-search"></span></button>
+            </div>
         </div>
 
         <!-- Main content area (not master page) -->
-        <div class="content">
+        <div class="container-fluid main-content">
+            <!-- Top story banners -->
+            <div class="top-story-container">
+                <div class="top-story-banner col-sm-10">
+                    <img src="./img/skijump.jpg" alt="Season Opener" class="" />
+                </div>
+                <div class="top-story-list-container col-sm-2">
+                    <ul>
+                        <li class="top-story-item-active">
+                            <div class="top-story-date">8/20/16</div>
+                            <div class="top-story-title">Season Opener Makes Article Headline Simple</div>
+                            <div class="top-story-tag-container">
+                                <div class="top-story-tag">Travel</div>
+                            </div>
+                        </li>
+                        <li class="top-story-item">
+                            <div class="top-story-date">7/15/16</div>
+                            <div class="top-story-title">Another title article, but with a different tag</div>
+                            <div class="top-story-tag-container">
+                                <div class="top-story-tag" style="background-color: #376189">Department</div>
+                            </div>
+                        </li>
+                        <li class="top-story-item">
+                            <div class="top-story-date">6/4/16</div>
+                            <div class="top-story-title">This would be the oldest news headline, from a corporate entity</div>
+                            <div class="top-story-tag-container">
+                                <div class="top-story-tag" style="background-color: #ec4b42">Travel</div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Left content area -->
+            <div class="col-sm-10 left-content-area">
+                <!-- Personalized news cards -->
+                <div class="col-sm-3 list-card">
+                    <div class="card-banner">
+                        <div class="top-story-tag" style="background-color: #ec4b42;">Corporate</div>
+                        <div class="card-action"><span class="fa fa-share-alt"></span></div>
+                        <div class="card-action"><span class="fa fa-star-o"></span></div>
+                        <div class="card-title">New Hire Information Group</div>
+                    </div>
+                    <div class="card-content">
+                        <ul class="card-list">
+                            <li class="card-list-item">
+                                <div class="card-list-image">
+                                    <img src="./img/carditem.png" alt="My tools" />
+                                </div>
+                                <div class="card-list-text">
+                                    John Evans shared <b>New Line Process</b> 3 minutes ago
+                                </div>
+                            </li>
+                            <li style="clear: both"></li>
+                            <li class="card-list-item">
+                                <div class="card-list-image">
+                                    <img src="./img/carditem.png" alt="My tools" />
+                                </div>
+                                <div class="card-list-text">
+                                    <b>Compliance Report</b> is trending
+                                </div>
+                            </li>
+                            <li style="clear: both"></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-3 list-card">
+                    <div class="card-banner">
+                        <div class="top-story-tag">Team</div>
+                        <div class="card-action"><span class="fa fa-share-alt"></span></div>
+                        <div class="card-action"><span class="fa fa-star-o"></span></div>
+                        <div class="card-title">Black Dyamind Marketing Group</div>
+                    </div>
+                    <div class="card-content">
+                        <ul class="card-list">
+                            <li class="card-list-item">
+                                <div class="card-list-image">
+                                    <img src="./img/carditem.png" alt="My tools" />
+                                </div>
+                                <div class="card-list-text">
+                                    John Evans shared <b>New Line Process</b> 3 minutes ago
+                                </div>
+                            </li>
+                            <li style="clear: both"></li>
+                            <li class="card-list-item">
+                                <div class="card-list-image">
+                                    <img src="./img/carditem.png" alt="My tools" />
+                                </div>
+                                <div class="card-list-text">
+                                    <b>Compliance Report</b> is trending
+                                </div>
+                            </li>
+                            <li style="clear: both"></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-3 list-card">
+                    <div class="card-banner">
+                        <div class="top-story-tag">Team</div>
+                        <div class="card-action"><span class="fa fa-share-alt"></span></div>
+                        <div class="card-action"><span class="fa fa-star-o"></span></div>
+                        <div class="card-title">Intranet Redesign Team Site</div>
+                    </div>
+                    <div class="card-content">
+                        <ul class="card-list">
+                            <li class="card-list-item">
+                                <div class="card-list-image">
+                                    <img src="./img/carditem.png" alt="My tools" />
+                                </div>
+                                <div class="card-list-text">
+                                    John Evans shared <b>New Line Process</b> 3 minutes ago
+                                </div>
+                            </li>
+                            <li style="clear: both"></li>
+                            <li class="card-list-item">
+                                <div class="card-list-image">
+                                    <img src="./img/carditem.png" alt="My tools" />
+                                </div>
+                                <div class="card-list-text">
+                                    <b>Compliance Report</b> is trending
+                                </div>
+                            </li>
+                            <li style="clear: both"></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-3 list-card">
+                    <div class="card-banner">
+                        <div class="top-story-tag" style="background-color: #376189;">Department</div>
+                        <div class="card-action"><span class="fa fa-share-alt"></span></div>
+                        <div class="card-action"><span class="fa fa-star-o"></span></div>
+                        <div class="card-title">Human Resources &amp; Benefits Group</div>
+                    </div>
+                    
+                    <div class="card-content">
+                        <ul class="card-list">
+                            <li class="card-list-item">
+                                <div class="card-list-image">
+                                    <img src="./img/carditem.png" alt="My tools" />
+                                </div>
+                                <div class="card-list-text">
+                                    John Evans shared <b>New Line Process</b> 3 minutes ago
+                                </div>
+                            </li>
+                            <li style="clear: both"></li>
+                            <li class="card-list-item">
+                                <div class="card-list-image">
+                                    <img src="./img/carditem.png" alt="My tools" />
+                                </div>
+                                <div class="card-list-text">
+                                    <b>Compliance Report</b> is trending
+                                </div>
+                            </li>
+                            <li style="clear: both"></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="row-separator"></div>
+
+                <div class="col-sm-3">
+                    <div class="your-team-container">
+                    <div class="webpart-title">Your Team</div>
+                    <ul class="my-tools-list">
+                        <li class="my-tool-item">
+                            <div class="my-tool-image">
+                                <img src="./img/user.png" alt="My tools" />
+                            </div>
+                            <div class="my-tool-text">
+                                <div class="my-tool-title">Bruce Torres</div>
+                                <div class="my-tool-desc">Consultant</div>
+                            </div>
+                        </li>
+                        <li style="clear: both"></li>
+                        <li class="my-tool-item">
+                            <div class="my-tool-image">
+                                <img src="./img/user.png" alt="My tools" />
+                            </div>
+                            <div class="my-tool-text">
+                                <div class="my-tool-title">Aaron Parker</div>
+                                <div class="my-tool-desc">Consultant</div>
+                            </div>
+                        </li>
+                        <li style="clear: both"></li>
+                        <li class="my-tool-item">
+                            <div class="my-tool-image">
+                                <img src="./img/user.png" alt="My tools" />
+                            </div>
+                            <div class="my-tool-text">
+                                <div class="my-tool-title">Brenda Edwards</div>
+                                <div class="my-tool-desc">Consultant</div>
+                            </div>
+                        </li>
+                        <li style="clear: both"></li>
+                        <li class="my-tool-item">
+                            <div class="my-tool-image">
+                                <img src="./img/user.png" alt="My tools" />
+                            </div>
+                            <div class="my-tool-text">
+                                <div class="my-tool-title">Bruce Vasquez</div>
+                                <div class="my-tool-desc">Consultant</div>
+                            </div>
+                        </li>
+                        <li style="clear: both"></li>
+                        <li class="my-tool-item">
+                            <div class="my-tool-image">
+                                <img src="./img/user.png" alt="My tools" />
+                            </div>
+                            <div class="my-tool-text">
+                                <div class="my-tool-title">Jane Burns</div>
+                                <div class="my-tool-desc">Consultant</div>
+                            </div>
+                        </li>
+                        <li style="clear: both"></li>
+                        <li class="my-tool-item">
+                            <div class="my-tool-image">
+                                <img src="./img/user.png" alt="My tools" />
+                            </div>
+                            <div class="my-tool-text">
+                                <div class="my-tool-title">Ronald Reynolds</div>
+                                <div class="my-tool-desc">Consultant</div>
+                            </div>
+                        </li>
+                        <li style="clear: both"></li>
+                        <li class="my-tool-item">
+                            <div class="my-tool-image">
+                                <img src="./img/user.png" alt="My tools" />
+                            </div>
+                            <div class="my-tool-text">
+                                <div class="my-tool-title">Jonathan Jensen</div>
+                                <div class="my-tool-desc">Consultant</div>
+                            </div>
+                        </li>
+                        <li style="clear: both"></li>
+                        <li class="my-tool-item">
+                            <div class="my-tool-image">
+                                <img src="./img/user.png" alt="My tools" />
+                            </div>
+                            <div class="my-tool-text">
+                                <div class="my-tool-title">Amber Walsh</div>
+                                <div class="my-tool-desc">Consultant</div>
+                            </div>
+                        </li>
+                        <li style="clear: both"></li>
+                        <li class="my-tool-item">
+                            <div class="my-tool-image">
+                                <img src="./img/user.png" alt="My tools" />
+                            </div>
+                            <div class="my-tool-text">
+                                <div class="my-tool-title">Heather Cruz</div>
+                                <div class="my-tool-desc">Consultant</div>
+                            </div>
+                        </li>
+                        <li style="clear: both"></li>
+                    </ul>
+                    </div>
+                </div>
+
+                <!-- Twitter -->
+                <div class="col-sm-3">
+                    <div class="twitter-container">
+                        <div class="twitter-icon"><span class="fa fa-twitter"></span></div>
+                        <div class="twitter-account">Slalom Twitter</div>
+                        <div style="clear: both"></div>
+                        <div class="tweet-text">The new DOL rule has a serious impact on retirement savings. More on the <span class="tweet-hashtag">#finserv</span> changes to come: <span class="tweet-link">http://slalom.ws/2f8q0Zf</span> <span class="tweet-hashtag">#Money2020</span></div>
+                        <div class="twitter-actions">
+                            <div class="twitter-action"><span class="fa fa-retweet"></span></div>
+                            <div class="twitter-action"><span class="fa fa-heart"></span></div>
+                            <div class="twitter-action"><span class="fa fa-reply"></span></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Highlighted article -->
+                <div class="col-sm-6">
+                    <div class="featured-article-container">
+                        <div class="top-story-tag" style="background-color: #ec4b42">C+C</div>
+                        <div style="clear: both"></div>
+                        <div class="featured-article-text">
+                            <div class="featured-article-title">
+                                10 Things we learned at SharePoint Fest, and how it applies it you
+                            </div>
+                            <div class="featured-article-snippet">
+                                A group of us travelled to the Carloinas this week to attend the annual SharePoint festival. We didn’t just learn about some of the upcoming features, but we learned about friendship. Take a look at our journey and…
+                            </div>
+                        </div>
+                        <div class="featured-article-image">
+                            <img src="./img/hipster.png" />
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-sm-2 right-content-area">
+                <!-- CEO Corner -->
+                <div class="ceo-corner-container">
+                    <div class="ceo-image"><img src="./img/ceo.png" /></div>
+                    <div class="ceo-corner-title"><div class="webpart-title">CEO Corner</div></div>
+                    <div style="clear: both"></div>
+                    <div class="article-title">My Latest Thoughts</div>
+                    <div class="article-body">Check out my latest blog about some of the new things we are doing at this company. I’ve got some great sunglasses and some great ideas.</div>
+                    <a class="content-link" href="#">More Blogs</a>
+                </div>
+
+                <!-- My tools -->
+                <div class="my-tools-container">
+                    <div class="my-tools-title"><div class="webpart-title">My Tools</div></div>
+                    <div class="my-tools-management">
+                        <span class="fa fa-gear"></span>&nbsp;manage
+                    </div>
+                    <div style="clear: both"></div>
+                    <ul class="my-tools-list">
+                        <li class="my-tool-item">
+                            <div class="my-tool-image">
+                                <img src="./img/tools.png" alt="My tools" />
+                            </div>
+                            <div class="my-tool-text">
+                                <div class="my-tool-title">Tool Title</div>
+                                <div class="my-tool-desc">Consultant</div>
+                            </div>
+                        </li>
+                        <li style="clear: both"></li>
+                        <li class="my-tool-item">
+                            <div class="my-tool-image">
+                                <img src="./img/tools.png" alt="My tools" />
+                            </div>
+                            <div class="my-tool-text">
+                                <div class="my-tool-title">Tool Title</div>
+                                <div class="my-tool-desc">Consultant</div>
+                            </div>
+                        </li>
+                        <li style="clear: both"></li>
+                        <li class="my-tool-item">
+                            <div class="my-tool-image">
+                                <img src="./img/tools.png" alt="My tools" />
+                            </div>
+                            <div class="my-tool-text">
+                                <div class="my-tool-title">Tool Title</div>
+                                <div class="my-tool-desc">Consultant</div>
+                            </div>
+                        </li>
+                        <li style="clear: both"></li>
+                        <li class="my-tool-item">
+                            <div class="my-tool-image">
+                                <img src="./img/tools.png" alt="My tools" />
+                            </div>
+                            <div class="my-tool-text">
+                                <div class="my-tool-title">Tool Title</div>
+                                <div class="my-tool-desc">Consultant</div>
+                            </div>
+                        </li>
+                        <li style="clear: both"></li>
+                        <li class="my-tool-item">
+                            <div class="my-tool-image">
+                                <img src="./img/tools.png" alt="My tools" />
+                            </div>
+                            <div class="my-tool-text">
+                                <div class="my-tool-title">Tool Title</div>
+                                <div class="my-tool-desc">Consultant</div>
+                            </div>
+                        </li>
+                        <li style="clear: both"></li>
+                    </ul>
+                    <a class="content-link" href="#">More&nbsp;<span class="fa fa-down-arrow"></span></a>
+                </div>
+
+                <!-- Support -->
+                <div class="support-container">
+                    <div class="my-tools-title"><div class="webpart-title">Support</div></div>
+                    <div style="clear: both"></div>
+                    <ul class="my-tools-list">
+                        <li class="my-tool-item">
+                            <div class="support-item-text">
+                                <div class="my-tool-title">Help Desk</div>
+                                <div class="my-tool-desc">IT Support</div>
+                            </div>
+                        </li>
+                        <li style="clear: both"></li>
+                        <li class="my-tool-item">
+                            <div class="support-item-text">
+                                <div class="my-tool-title">Human Resources Portal</div>
+                                <div class="my-tool-desc">All your resources</div>
+                            </div>
+                        </li>
+                        <li style="clear: both"></li>
+                        <li class="my-tool-item">
+                            <div class="support-item-text">
+                                <div class="my-tool-title">Open a ticket</div>
+                                <div class="my-tool-desc">Human Resources Portal</div>
+                            </div>
+                        </li>
+                        <li style="clear: both"></li>
+                        <li class="my-tool-item">
+                            <div class="support-item-text">
+                                <div class="my-tool-title">Change your Password</div>
+                                <div class="my-tool-desc">Password changing portal</div>
+                            </div>
+                        </li>
+                        <li style="clear: both"></li>
+                        <li class="my-tool-item">
+                            <div class="support-item-text">
+                                <div class="my-tool-title">The Lodge Network</div>
+                                <div class="my-tool-desc">Networking Tool</div>
+                            </div>
+                        </li>
+                        <li style="clear: both"></li>
+                    </ul>
+                </div>
+            </div>
+            </div>
+
+            
         </div>
 
         <!-- Footer (master page) -->
         <div class="container-fluid footer">
-            <div class="col-sm-9">
+            <div class="col-sm-10">
                 <div class="footer-content-top">
                     <div class="footer-buffer-top hidden-xs"></div>
                 </div>
@@ -44,7 +469,7 @@
                     <div class="footer-buffer-bottom hidden-xs"></div>
                 </div>
             </div>
-            <div class="footer-badge-container col-sm-3">
+            <div class="footer-badge-container col-sm-2">
                 <div class="footer-badge">@TheLodge</div>
             </div>
         </div>
